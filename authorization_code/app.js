@@ -13,6 +13,15 @@ var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 
+
+/*
+
+Access token
+    BQBLhmljDhk6vlHhizVb_hOw__csmn89PJLT5AlutnjIs1HN-UOdgX9JjHictfCZQ3AZaX6UWxfDYGkpxxHNwiH142EtyAuT8W0BuSu5hp4FiN1b5wNfwWUMytoO9Aee-gT_3u17oHYBDYjizRQ-JA0LP3Mdhrk8U3k1j3vpe9SbIvenNMCt5I6s24F69tkJ2TY
+Refresh token
+    AQDw4Bm2k1ZU4cgsvth9NC11JxRMV20IxoxzvutVOFb-9MlCEY21G5gu2vbjju3L1
+*/
+
 var client_id = '0d88a0f537e9418797b4e72421f5c070'; // Your client id
 var client_secret = '8ae14b7f495340a4a3454ab38f41ff53'; // Your secret
 var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
@@ -46,7 +55,8 @@ app.get('/login', function(req, res) {
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'user-read-private user-read-email';
+  var scope = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming ';
+  
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
       response_type: 'code',
