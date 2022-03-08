@@ -24,8 +24,8 @@ Refresh token
 
 
 
-var client_id = '0d88a0f537e9418797b4e72421f5c070'; // Your client id
-var client_secret = '8ae14b7f495340a4a3454ab38f41ff53'; // Your secret
+var client_id = '5b5a748b3c7d4cd3b3cc8a9537e2535d'; // Your client id
+var client_secret = 'e608ecfb260d4661867df604f3a7c3c2'; // Your secret
 var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 /**
