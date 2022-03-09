@@ -23,6 +23,8 @@ Access token
 Refresh token
     AQAlGUug662SDDlUZPhICtZFKtjsDQ6FMHsb7x-6SnUZuSjj11m0NfUhCtm-pRucH7sXWRBfR6JjnyBYuqRKkrp27Dgao5UKFQ7babZMBWn8WHO7m6aQgDjH7UqXlffBfu8 
 
+    AQAlGUug662SDDlUZPhICtZFKtjsDQ6FMHsb7x-6SnUZuSjj11m0NfUhCtm-pRucH7sXWRBfR6JjnyBYuqRKkrp27Dgao5UKFQ7babZMBWn8WHO7m6aQgDjH7UqXlffBfu8
+    */
 
 
 var client_id = '0d88a0f537e9418797b4e72421f5c070'; // Your client id
@@ -58,7 +60,7 @@ app.get('/login', function(req, res) {
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming ';
+  var scope = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing streaming';
   
   res.redirect('https://accounts.spotify.com/authorize?' +
     querystring.stringify({
